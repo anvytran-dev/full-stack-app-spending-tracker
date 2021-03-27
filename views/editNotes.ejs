@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <title>Money Tracker</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<div class="col-sm-6 col-sm-offset-3">
+
+    <div class="col-sm-6" id ="editNoteDiv">
+        
+        <h2>Edit your purchase</h2>
+
+        <% if (user.local.email) { %>
+            <form action="/updateMessage" method="POST" class ="formNote">
+
+              <%
+
+
+              var updatedDate = new Date(message.date).toISOString().split('T')[0]
+
+              
+              %>
+
+              <label for="todayDate">Date:</label>
+              <input type="date" id="todayDate" name="date" value="<%= updatedDate %>">
+
+              <label for="itemBought">What did you buy?</label>
+              <input type="text" id="itemBought" name="itemBought" value="<%= message.itemBought %>">
+
+              <label for="amountSpent">How much did you spend?</label>
+              <input type="text" id="amountSpent" name="amountSpent" value="<%= message.amountSpent %>">
+
+              <input type="text" value="<%= user.local.email %>" name="name" class="userEmail">
+
+
+              <input type="text" value='<%= message._id %>' name="objectID" id = "inputObjectID">
+
+              <button type="submit">Submit</button>
+
+            </form>
+
+            </form>
+          </div>
+          <% } %>
+
+
+</div>
+</div>
+</body>
+</html>

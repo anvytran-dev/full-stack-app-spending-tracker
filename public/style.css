@@ -1,0 +1,113 @@
+*{
+  box-sizing: border-box;
+  
+}
+img{
+
+  height: 200px;
+}
+
+body{
+
+  background-image: url('../img/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 120rem;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+  word-wrap: break-word;
+  font-family: 'Oxygen', sans-serif;
+
+}
+
+.jumbotron{
+
+  background-color: blanchedalmond;
+}
+
+.jumbotron h1{
+
+  font-family: 'Oxygen', sans-serif;
+
+}
+
+.jumbotron p{
+  margin-top: 3%;
+}
+
+.formNote{
+  display: grid;
+  flex-direction: column;
+}
+
+.fa-trash:before {
+  content: "\f014";
+}
+
+.container{
+  margin-left: 0%;
+  margin-right: 0%;
+  width: 100%;
+}
+
+.secNotesMain{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.secNotes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+
+.ulMessages{
+  padding-left: 0%;
+  border: 2px solid black;
+  width: 90%;
+}
+
+.liItems{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.liItems span{
+  margin-bottom: 5%;
+}
+#divNotesMain{
+  display: flex;
+  margin-left: 0%;
+  width: 100%;
+}
+
+#divNotes{
+  width: 100%;
+}
+
+.secCreateNote{
+  width: 50%;
+}
+
+.writtenNote{
+  height: 100px;
+}
+
+.userEmail, #inputObjectID{
+  display: none;
+}
+
+#editNoteDiv{
+  width: 100%;
+  margin-left: 0%;
+}
